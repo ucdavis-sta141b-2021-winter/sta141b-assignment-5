@@ -1,0 +1,37 @@
+---
+title: "Question 2"
+output: html_document
+---
+
+
+##### (a) By visiting https://statistics.ucdavis.edu/courses/descriptions-undergrad, scrape the course information including course numbers, titles, units and descriptions.
+
+Make a dataframe out of it.
+
+```
+#> # A tibble: 36 x 4
+#>    course  title                     unit  description                          
+#>    <chr>   <chr>                     <chr> <chr>                                
+#>  1 STA 010 Statistical Thinking      4     Lecture—3 hour(s); Discussion/Labora…
+#>  2 STA 012 Introduction to Discrete… 4     Lecture—3 hour(s); Laboratory—1 hour…
+#>  3 STA 013 Elementary Statistics     4     Lecture—3 hour(s); Discussion—1 hour…
+#>  4 STA 01… Elementary Statistics     4     Lecture—1.5 hour(s); Web Virtual Lec…
+#>  5 STA 032 Gateway to Statistical D… 4     Lecture—3 hour(s); Laboratory—1 hour…
+#>  6 STA 09… Seminar                   1-2   Seminar—1-2 hour(s). Prerequisite(s)…
+#>  7 STA 098 Directed Group Study      1-5   Variable. Prerequisite(s): Consent o…
+#>  8 STA 099 Special Study for Underg… 1-5   Variable. Prerequisite(s): Consent o…
+#>  9 STA 100 Applied Statistics for B… 4     Lecture—3 hour(s); Laboratory—1 hour…
+#> 10 STA 101 Advanced Applied Statist… 4     Lecture—3 hour(s); Laboratory—1 hour…
+#> # … with 26 more rows
+```
+
+Hint: you might need `str_split` or `str_extract` to extract the course codes.
+
+
+
+
+##### (b) By visiting https://statistics.ucdavis.edu/courses/expanded-descriptions, scrape all the links for lower and upper division courses.
+
+
+
+##### (c) By using the links from (b), extracts all the prerequisite of the courses and join with the result in (a).

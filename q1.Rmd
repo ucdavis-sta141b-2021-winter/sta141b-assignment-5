@@ -1,0 +1,25 @@
+---
+title: "Question 1"
+output: html_document
+---
+
+In this question, you will be asked to use Yelp API to perform some tasks.
+
+First, you will need to register an app on Yelp platform: https://www.yelp.com/developers/v3/manage_app
+
+Copy the API key in the file `.Renviron` and do not push it to github!
+
+
+##### (a) Use the "search" endpoint to search for Davis's "Burgers and Brew" and get its `id`.
+
+
+
+##### (b) Use the "detail" endpoint to fetch "Burgers and Brew"'s business hour.
+
+
+
+##### (c) By using the reviews endpoint, get some reviews for "Burgers and Brew".
+
+PS: there is a hard limitation that only 3 reviews are returned. 
+
+

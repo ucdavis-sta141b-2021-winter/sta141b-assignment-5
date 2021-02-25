@@ -1,0 +1,57 @@
+---
+title: "Question 3"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+It is an chance for you to practice your skills on regular expressions.
+
+
+(a) Consider the `phones.txt` files, extract all the telephone/fax numbers and format them as `(xxx)-xxx-xxxx`. (Hint: there should be 24 of them.)
+
+```{r}
+txt <- read_file("phones.txt")
+```
+
+
+(b) Write a regular expression `regex` that will match valid urls (the urls in `strings` are valid and none of the `strings2` are valid urls). Your regex should be as general as possible, do not hard code the domain names.
+
+```{r}
+strings <- c(
+    "http://www.foufos.gr",
+    "https://www.foufos.gr",
+    "http://foufos.gr",
+    "http://www.foufos.gr/kino",
+    "http://werer.gr",
+    "www.foufos.gr",
+    "www.mp3.com",
+    "www.t.co",
+    "http://t.co",
+    "http://www.t.co",
+    "https://www.t.co",
+    "www.aa.com",
+    "http://aa.com",
+    "http://www.aa.com",
+    "https://www.aa.com",
+    "https://www.aa.com"
+)
+strings2 <- c(
+    "www.foufos",
+    "www.foufos-.gr",
+    "www.-foufos.gr",
+    "foufos.gr",
+    "http://www.foufos",
+    "http://foufos",
+    "www.mp3#.com"
+)
+```
+
+```{r}
+regex <- ""
+all(str_detect(strings, regex))
+all(str_detect(strings2, regex, negate = TRUE))
+```
+
